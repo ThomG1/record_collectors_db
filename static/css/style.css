@@ -12,3 +12,9 @@ html {
     min-height: 100vh;
     font-family: Neucha;
 }
+
+.card {
+  background: url('../images/vinyl2.jpg') no-repeat center center;
+  background-size: cover;
+
+}
