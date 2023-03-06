@@ -1,14 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-
-
-    {% for record in records %}
+    <!-- {% for record in records %}
         {{ record.artist_name }}
         <br>
         <img class="responsive-img" src="{{record.image}}" alt="{{record.album_name}}">
 
+    {% endfor %} -->
+<ul class="collapsible expandable">
+    {% for record in records %}
+    <li>
+        <div class="collapsible-header">
+            <i class="fas fa-record-vinyl"></i>
+            <strong>{{ record.album_name }}</strong> 
+        </div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span>
+        
+        </div>
+    </li>
     {% endfor %}
+</ul>
 
 {% endblock %}
