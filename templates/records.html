@@ -4,8 +4,10 @@
 
 
 
-    {% for records in records %}
-        {{ records.artist_name }}
+    {% for record in records %}
+        {{ record.artist_name }}
+        <br>
+        <img class="responsive-img" src="{{record.image}}" alt="{{record.album_name}}">
 
     {% endfor %}
 
