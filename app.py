@@ -96,6 +96,11 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/new_record")
+def new_record():
+    return render_template("new_record.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
