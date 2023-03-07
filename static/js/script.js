@@ -2,8 +2,12 @@
     jQuery for MaterializeCSS initialization
 */
 
+let selects = document.querySelectorAll("select");
+M.FormSelect.init(selects);
+
 $(document).ready(function () {
     $(".sidenav").sidenav({edge: "right"});
+    $("select").formSelect();
     $(".datepicker").datepicker({
       format: "dd mmmm, yyyy",
       yearRange: 100,
@@ -13,6 +17,7 @@ $(document).ready(function () {
       }
   });
 });
+
 
 /* Adds materialize expandable accordian */
 
