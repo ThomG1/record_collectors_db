@@ -34,6 +34,18 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                <select id="genre" name="genre" class="validate" required>
+                    <option value="" disabled selected>Choose Genre</option>
+                    {% for genre in genre %}
+                    <option value="{{ genre.genre }}">{{ genre.genre }}</option>
+                    {% endfor %}
+                </select>
+                <label for="genre">Genre</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
                 <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
                 <input id="release_date" name="release_date" type="text" class="datepicker validate" required>
                 <label for="release_date">Release Date</label>
@@ -42,24 +54,28 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
-                <textarea id="record_label" name="record_label" class="materialize-textarea validate"
+                <textarea id="price" name="price" class="materialize-textarea validate"
                     required></textarea>
-                <label for="record_label">Record Label</label>
+                <label for="record_label">Price</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <textarea id="image" name="image" class="materialize-textarea validate"
+                    required></textarea>
+                <label for="image">Artwork</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <textarea id="contact" name="contact" class="materialize-textarea validate" required></textarea>
+                <label for="contact">Contact:</label>
             </div>
         </div>
 
-        <!-- <div class="row">
-				<div class="input-field col s12">
-					<div class="switch">
-                        <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
-						<label for="is_urgent">
-                            <input type="checkbox" id="is_urgent" name="is_urgent">
-                            <span class="lever"></span>
-                            Is Urgent
-                        </label>
-					</div>
-				</div>
-			</div> -->
+
     </form>
 </div>
 

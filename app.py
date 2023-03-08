@@ -99,7 +99,8 @@ def logout():
 @app.route("/new_record")
 def new_record():
     trading = mongo.db.trading.find().sort("trading_position", 1)
-    return render_template("new_record.html", trading=trading)
+    genre = mongo.db.genre.find().sort("genre", 1)
+    return render_template("new_record.html", trading=trading, genre=genre)
 
 
 if __name__ == "__main__":
