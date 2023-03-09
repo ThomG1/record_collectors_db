@@ -120,12 +120,12 @@ def new_record():
     return render_template("new_record.html", trading=trading, genre=genre)
 
 
-@app.route("/edit_record/<records_id>", methods=["GET", "POST"])
-def edit_record(records_id):
-    task = mongo.db.records.find_one({"_id": ObjectId(records_id)})
+@app.route("/edit_record/<record_id>", methods=["GET", "POST"])
+def edit_record(record_id):
+    record = mongo.db.records.find_one({"_id": ObjectId(record_id)})
     trading = mongo.db.trading.find().sort("trading_position", 1)
     genre = mongo.db.genre.find().sort("genre", 1)
-    return render_template("edit_record.html", records=records)
+    return render_template("edit_record.html", record=record)
 
 
 if __name__ == "__main__":
