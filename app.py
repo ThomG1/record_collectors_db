@@ -96,8 +96,25 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/new_record")
+@app.route("/new_record", methods=["GET", "POST"])
 def new_record():
+    if request.method == "POST":
+        record = {
+            "trading_position": request.form.get("trading_position"),
+            "album_name": request.form.get("album_name"),
+            "artist_name": request.form.get("artist_name"),
+            "genre": request.form.get("genre"),
+            "release_date": request.form.get("release_date"),
+            "release_date": request.form.get("release_date"),
+            "price": request.form.get("price"),
+            "contact": request.form.get("contact"),
+            "user": session["user"]
+            
+        }
+        mongo.db.records.insert_one(record)
+        flash("Record Successfully Added")
+        return redirect(url_for("get_records"))
+        
     trading = mongo.db.trading.find().sort("trading_position", 1)
     genre = mongo.db.genre.find().sort("genre", 1)
     return render_template("new_record.html", trading=trading, genre=genre)
