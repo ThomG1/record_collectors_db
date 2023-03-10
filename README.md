@@ -1,12 +1,9 @@
 # RECORD COLLECTORS DB
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+The Record Collectors Database, is an application for vinyl collectors to organise their wishlist of records. Collectors are able to sign-up, and make lists of all the records they are hunting for, or advertise records they are looking to sell. 
 
-In this section, you will include a few paragraphs providing an overview of your project.
-Essentially, this part is your "sales pitch".
+As well as allow users to organise their own wishlists, it will to allow the user to communally explore the wishlists and advertisements of other users to create a 'marketplace' feel to the application.  
 
-At this stage, you should have a name for your project so use it!
-Don't introduce the project as a "portfolio project" for the diploma.
 
 In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
 
@@ -30,7 +27,11 @@ https://pandao.github.io/editor.md/en.html
 
 ## UX
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+The central background image of the site is an image of a well-worn collection of records. This should provide a familiarity to the user as it emulates the process of being in a record shop, flipping through sleeves. 
+
+The central background image is enclosed between light brown headers and footers, this is designed to give the feel of a shelf, also aiming at creating familiarity for the user. 
+
+The profile page is laid out withe users individual collection in three columns. 
 
 In this section, you will briefly explain your design processes.
 
