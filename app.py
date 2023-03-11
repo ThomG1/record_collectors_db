@@ -108,8 +108,7 @@ def new_record():
             "release_date": request.form.get("release_date"),
             "price": request.form.get("price"),
             "contact": request.form.get("contact"),
-            "user": session["user"]
-            
+            "user": session["user"]        
         }
         mongo.db.records.insert_one(record)
         flash("Record Successfully Added")
@@ -122,6 +121,22 @@ def new_record():
 
 @app.route("/edit_record/<record_id>", methods=["GET", "POST"])
 def edit_record(record_id):
+
+     if request.method == "POST":
+        submit = {
+            "trading_position": request.form.get("trading_position"),
+            "album_name": request.form.get("album_name"),
+            "artist_name": request.form.get("artist_name"),
+            "genre": request.form.get("genre"),
+            "release_date": request.form.get("release_date"),
+            "release_date": request.form.get("release_date"),
+            "price": request.form.get("price"),
+            "contact": request.form.get("contact"),
+            "user": session["user"]          
+        }
+        mongo.db.records.update({"_id": ObjectId(record_id)}, submit)
+        flash("Record Updated")
+
     record = mongo.db.records.find_one({"_id": ObjectId(record_id)})
     trading = mongo.db.trading.find().sort("trading_position", 1)
     genre = mongo.db.genre.find().sort("genre", 1)
