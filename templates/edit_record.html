@@ -10,9 +10,13 @@
             <div class="input-field col s12">
                 <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
                 <select id="trading_position" name="trading_position" class="validate" required>
-                    <option value="" disabled selected>Choose Option</option>
+                    <option value="" disabled>Choose Option</option>
                     {% for trade in trading %}
-                    <option value="{{ trade.trading_position }}">{{ trade.trading_position }}</option>
+                        {% if trade.trading_position == record.trading_position %}
+                            <option value="{{ trade.trading_position }}" selected>{{ trade.trading_position }}</option>
+                        {% else %}
+                            <option value="{{ trade.trading_position }}">{{ trade.trading_position }}</option>
+                        {% endif %}
                     {% endfor %}
                 </select>
                 <label for="trading_position">Trading</label>
@@ -22,18 +26,20 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-record-vinyl prefix light-blue-text text-darken-4"></i>
-                <input id="album_name" name="album_name" type="text" class="validate" required>
+                <input id="album_name" name="album_name" type="text" class="validate" 
+                value="{{ record.album_name }}"required>
                 <label for="album_name">Album Name</label>
             </div>
         </div>
         <!-- artist name -->
         <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
-                <textarea id="artist_name" name="artist_name" class="materialize-textarea validate" required></textarea>
-                <label for="album_name">Artist Name</label>
-            </div>
-        </div>
+                <div class="input-field col s12">
+                <i class="fas fa-record-vinyl prefix light-blue-text text-darken-4"></i>
+                <input id="artist_name" name="artist_name" type="text" class="validate" 
+                value="{{ record.artist_name }}"required>
+                <label for="artist_name">Artist Name</label>
+                </div>
+        </div>        
         <!-- genre -->
         <div class="row">
             <div class="input-field col s12">
@@ -41,7 +47,11 @@
                 <select id="genre" name="genre" class="validate" required>
                     <option value="" disabled selected>Choose Genre</option>
                     {% for genre in genre %}
-                    <option value="{{ genre.genre }}">{{ genre.genre }}</option>
+                        {% if genre.genre == record.genre %}
+                            <option value="{{ genre.genre }}" selected>{{ genre.genre }}</option>
+                        {% else %}
+                            <option value="{{ genre.genre }}">{{ genre.genre }}</option>
+                        {% endif %}
                     {% endfor %}
                 </select>
                 <label for="genre">Genre</label>
@@ -51,17 +61,18 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
-                <input id="release_date" name="release_date" type="text" class="datepicker validate" required>
+                <input id="release_date" name="release_date" type="text" class="datepicker validate" 
+                value="{{ record.release_date }} "required>
                 <label for="release_date">Release Date</label>
             </div>
         </div>
         <!-- price -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
-                <textarea id="price" name="price" class="materialize-textarea validate"
-                    required></textarea>
-                <label for="price">Price</label>
+                <i class="fas fa-record-vinyl prefix light-blue-text text-darken-4"></i>
+                <input id="price" name="price" type="text" class="validate" 
+                value="{{ record.price }}"required>
+                <label for="price">price</label>
             </div>
         </div>
         <!-- album art -->
@@ -75,14 +86,19 @@
         <!-- contact -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
-                <textarea id="contact" name="contact" class="materialize-textarea validate" required></textarea>
-                <label for="contact">Contact:</label>
+                <i class="fas fa-record-vinyl prefix light-blue-text text-darken-4"></i>
+                <input id="contact" name="contact" type="text" class="validate" 
+                value="{{ record.contact }}"required>
+                <label for="contact">Contact</label>
             </div>
         </div>
         <!-- submit button -->
         <div class="row">
             <div class="col s12 center-align">
+                <!-- cancel button -->
+                <a href="{{ url_for('get_records') }}" class="btn-large red text-shadow">
+                    Cancel <i class="fas fa-times-circle right"></i>
+                </a>
                 <button type="submit" class="btn-large light-blue darken-1 text-shadow">
                     Edit Record <i class="fas fa-edit right"></i>
                 </button>

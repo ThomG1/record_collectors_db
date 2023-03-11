@@ -125,7 +125,7 @@ def edit_record(record_id):
     record = mongo.db.records.find_one({"_id": ObjectId(record_id)})
     trading = mongo.db.trading.find().sort("trading_position", 1)
     genre = mongo.db.genre.find().sort("genre", 1)
-    return render_template("edit_record.html", record=record)
+    return render_template("edit_record.html", record=record, trading=trading, genre=genre)
 
 
 if __name__ == "__main__":
