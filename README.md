@@ -114,18 +114,17 @@ In this section, list all of your user stories for the project.
 ### New Site Users
 
 - As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to create a personalised account, so that I can personalise my record collection .
+- As a new site user, I would like to add new records to my profile, so that I can keep my profile up to date with new purchases or sales I would like to make.
+- As a new site user, I would like to record important features of each item, such as 'genre' and 'price', so that I can create a comprehensive picture of the records I'm exploring.
 
 ### Returning Site Users
 
+- As a returning site user, I would like to log in and out of my account, so that I can ensure only I have access to the records I have added.
+- As a returning site user, I would like to update a record, so that I can keep up to do date with changes, such as the price.
+- As a returning site user, I would like to delete a record, so that I can remove records I may have bought, sold, or no longer want.
 - As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+
 
 ### Site Admin
 
