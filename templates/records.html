@@ -11,11 +11,11 @@
     {% for record in records %}
     <li>
         <div class="collapsible-header">
-            <div class="col s3">
+            <!-- <div class="col s3">
                 <i class="fas fa-caret-down"></i>
                 <a href="{{ url_for('delete_record', record_id=record._id) }}" class="btn-small green accent-4">Delete</a>
                 <a href="{{ url_for('edit_record', record_id=record._id) }}" class="btn-small light-blue lighten-1">Edit</a>
-            </div>
+            </div> -->
             <i class="fas fa-record-vinyl"></i>
             <strong>{{ record.album_name }}</strong> 
         </div>
