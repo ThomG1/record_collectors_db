@@ -11,11 +11,15 @@
                 <strong>{{ record.album_name }}</strong>
             </div>
 
-            <div class="collapsible-body"><span>{{record.price}}</span>
-
+            <div class="collapsible-body">
+                <span>{{record.price}}</span>
+                {% for trade in trading %}
+                {{ trade.trading_position }}
+                 {% endfor %}
             </div>
         </li>
         {% endfor %}
+
     </ul>
 
 </div>
