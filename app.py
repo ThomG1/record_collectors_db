@@ -134,7 +134,7 @@ def edit_record(record_id):
             "contact": request.form.get("contact"),
             "user": session["user"]          
         }
-        mongo.db.records.update({"_id": ObjectId(record_id)}, submit)
+        mongo.db.records.update_one({"_id": ObjectId(record_id)}, {"$set": submit })
         flash("Record Updated")
 
     record = mongo.db.records.find_one({"_id": ObjectId(record_id)})
