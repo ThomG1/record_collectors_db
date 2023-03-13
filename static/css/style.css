@@ -38,10 +38,10 @@ html {
   background-size: cover;
 }
 
-.card-panel {
+/* .card-panel {
   background: url('../images/vinyl3.jpg') no-repeat center center;
   background-size: cover;
-}
+} */
 
 .flashes h4 {
   line-height: 2;
@@ -71,3 +71,13 @@ html {
   width: 100%;
   background-image: repeating-linear-gradient(white 0px, white 24px, steelblue 25px);
 } */
+
+.user-records {
+  border: .4rem solid brown;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
