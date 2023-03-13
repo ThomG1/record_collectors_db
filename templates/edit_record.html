@@ -8,7 +8,7 @@
         <!-- trading position -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-shopping-cart prefix light-blue-text text-darken-4"></i>
                 <select id="trading_position" name="trading_position" class="validate" required>
                     <option value="" disabled>Choose Option</option>
                     {% for trade in trading %}
@@ -34,7 +34,7 @@
         <!-- artist name -->
         <div class="row">
                 <div class="input-field col s12">
-                <i class="fas fa-record-vinyl prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-street-view prefix light-blue-text text-darken-4"></i>
                 <input id="artist_name" name="artist_name" type="text" class="validate" 
                 value="{{ record.artist_name }}"required>
                 <label for="artist_name">Artist Name</label>
@@ -43,7 +43,7 @@
         <!-- genre -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-music prefix light-blue-text text-darken-4"></i>
                 <select id="genre" name="genre" class="validate" required>
                     <option value="" disabled selected>Choose Genre</option>
                     {% for genre in genre %}
@@ -69,7 +69,7 @@
         <!-- price -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-record-vinyl prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-pound-sign prefix light-blue-text text-darken-4"></i>
                 <input id="price" name="price" type="text" class="validate" 
                 value="{{ record.price }}"required>
                 <label for="price">price</label>
@@ -86,7 +86,7 @@
         <!-- contact -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-record-vinyl prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-envelope prefix light-blue-text text-darken-4"></i>
                 <input id="contact" name="contact" type="text" class="validate" 
                 value="{{ record.contact }}"required>
                 <label for="contact">Contact</label>
