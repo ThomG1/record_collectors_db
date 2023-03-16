@@ -87,8 +87,8 @@ def profile(username):
 
     records = mongo.db.records.find({"user": username})
     trading = mongo.db.trading.find().sort("trading_position", 1)
-    genre = mongo.db.genre.find().sort("genre", 1)
-    return render_template("profile.html", username=username, records=records, genre=genre)
+    genres = mongo.db.genres.find().sort("genre", 1)
+    return render_template("profile.html", username=username, records=records, genres=genres)
 
 
 @app.route("/logout")
@@ -118,8 +118,8 @@ def new_record():
         return redirect(url_for("get_records"))
         
     trading = mongo.db.trading.find().sort("trading_position", 1)
-    genre = mongo.db.genre.find().sort("genre", 1)
-    return render_template("new_record.html", trading=trading, genre=genre)
+    genres = mongo.db.genres.find().sort("genre", 1)
+    return render_template("new_record.html", trading=trading, genres=genres)
 
 
 @app.route("/edit_record/<record_id>", methods=["GET", "POST"])
@@ -142,8 +142,8 @@ def edit_record(record_id):
 
     record = mongo.db.records.find_one({"_id": ObjectId(record_id)})
     trading = mongo.db.trading.find().sort("trading_position", 1)
-    genre = mongo.db.genre.find().sort("genre", 1)
-    return render_template("edit_record.html", record=record, trading=trading, genre=genre)
+    genres = mongo.db.genres.find().sort("genre", 1)
+    return render_template("edit_record.html", record=record, trading=trading, genres=genres)
 
 
 @app.route("/delete_record/<record_id>")
