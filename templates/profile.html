@@ -18,15 +18,15 @@
             <br> 
             {{ record.artist_name }}
             <br>
-            {% for genre in genres %}
-            {{ genre.genre }}
-            {% endfor %}
-            {{ record.release_date}}
+            {{ record.genre }}
             <br>
-            {{ record.price}}
+            {{ record.release_date }}
             <br>
-            {{ record.user}}
+            {{ record.price }}
             <br>
+            {{ record.user }}
+            <br>
+            {{ record.trading_position }}
             <img class="responsive-img" src="{{record.image}}" alt="{{record.album_name}}">
 
 
