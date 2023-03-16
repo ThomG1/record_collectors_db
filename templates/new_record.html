@@ -8,7 +8,7 @@
         <!-- trading position -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-shopping-cart prefix"></i>
                 <select id="trading_position" name="trading_position" class="validate" required>
                     <option value="" disabled selected>Choose Option</option>
                     {% for trade in trading %}
@@ -21,7 +21,7 @@
         <!-- album name -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-record-vinyl prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-record-vinyl prefix"></i>
                 <input id="album_name" name="album_name" type="text" class="validate" required>
                 <label for="album_name">Album Name</label>
             </div>
@@ -29,7 +29,7 @@
           <!-- artist name -->
           <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-record-vinyl prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-street-view prefix"></i>
                 <input id="artist_name" name="artist_name" type="text" class="validate" required>
                 <label for="artist_name">Artist Name</label>
             </div>
@@ -37,10 +37,10 @@
         <!-- genre -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-music prefix"></i>
                 <select id="genre" name="genre" class="validate" required>
                     <option value="" disabled selected>Choose Genre</option>
-                    {% for genre in genre %}
+                    {% for genre in genres %}
                     <option value="{{ genre.genre }}">{{ genre.genre }}</option>
                     {% endfor %}
                 </select>
@@ -50,7 +50,7 @@
         <!-- release date -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-calendar-alt prefix"></i>
                 <input id="release_date" name="release_date" type="text" class="datepicker validate" required>
                 <label for="release_date">Release Date</label>
             </div>
@@ -58,7 +58,7 @@
         <!-- price -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-record-vinyl prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-pound-sign prefix"></i>
                 <input id="price" name="price" type="text" class="validate" required>
                 <label for="price">Price</label>
             </div>
@@ -66,7 +66,7 @@
         <!-- album art -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-align-left prefix"></i>
                 <textarea id="image" name="image" class="materialize-textarea validate"></textarea>
                 <label for="image">Artwork</label>
             </div>
@@ -74,7 +74,7 @@
         <!-- contact -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-record-vinyl prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-envelope prefix"></i>
                 <input id="contact" name="contact" type="text" class="validate" required>
                 <label for="contact">Contact</label>
             </div>
@@ -82,7 +82,7 @@
         <!-- submit button -->
         <div class="row">
             <div class="col s12 center-align">
-                <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                <button type="submit" class="btn-large">
                     Add New Record <i class="fas fa-plus-square right"></i>
                 </button>
             </div>
