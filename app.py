@@ -111,6 +111,7 @@ def new_record():
             "release_date": request.form.get("release_date"),
             "price": request.form.get("price"),
             "contact": request.form.get("contact"),
+            "image": request.form.get("image"),
             "user": session["user"]        
         }
         mongo.db.records.insert_one(record)
@@ -135,6 +136,7 @@ def edit_record(record_id):
             "release_date": request.form.get("release_date"),
             "price": request.form.get("price"),
             "contact": request.form.get("contact"),
+            "image": request.form.get("image"),
             "user": session["user"]          
         }
         mongo.db.records.update_one({"_id": ObjectId(record_id)}, {"$set": submit })
