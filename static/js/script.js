@@ -8,6 +8,8 @@ M.FormSelect.init(selects);
 $(document).ready(function () {
     $(".sidenav").sidenav({edge: "right"});
     $("select").formSelect();
+    $('.modal').modal();
+    $('.carousel').carousel();
     $(".datepicker").datepicker({
       format: "dd mmmm, yyyy",
       yearRange: 100,

@@ -3,7 +3,7 @@
 
 <div class="container">
 
-    <ul class="collapsible expandable">
+    <!-- <ul class="collapsible expandable">
         {% for record in records %}
         <li>
             <div class="collapsible-header">
@@ -20,8 +20,21 @@
         </li>
         {% endfor %}
 
-    </ul>
+    </ul> -->
+
+    <div class="carousel">
+        {% for record in records %}
+        <a class="carousel-item" href="{{record.image}}"><img src="{{record.image}}"></a>
+      {% endfor %}
+    </div>
 
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, options);
+  });
+</script>
 
 {% endblock %}
