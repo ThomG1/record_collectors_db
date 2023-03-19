@@ -3,16 +3,23 @@
 
 <div class="container box-mid">
 
-    <div class="carousel">
-        {% for record in records %}
-        <a class="carousel-item" href="{{record.image}}"><img src="{{record.image}}"></a>
-        <div class="overlay">
-            <div class="text">{{record.records}}</div>
+    <div class="image">
+        <div class="carousel">
+            {% for record in records %}
+            <a class="carousel-item image__img" href="{{record.image}}">
+                <img src="{{record.image}}">
+                    <div class="image__img">
+                        <div class="image__overlay">
+                            {{record.album_name}}
+                        </div>
+                    </div>
+                </img>
+            </a>
+            {% endfor %}
         </div>
-      {% endfor %}
     </div>
 
-        <!-- <ul class="collapsible expandable">
+    <!-- <ul class="collapsible expandable">
         {% for record in records %}
         <li>
             <div class="collapsible-header">
@@ -32,10 +39,10 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, options);
-  });
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, options);
+    });
 </script>
 
 {% endblock %}
