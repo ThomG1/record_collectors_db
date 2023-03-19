@@ -40,11 +40,20 @@ html {
   color: black;
 }
 
+/* Verification  */
+.card {
+  border: .4rem solid #4D2F29;
+}
+
 
 /* Home Page  */
 .box-mid {
   background-color: white;
   border: .4rem solid #4D2F29;
+}
+
+.overlay:hover {
+  opacity: 1;
 }
 
 /* Profile Page  */
