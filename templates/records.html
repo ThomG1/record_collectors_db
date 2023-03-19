@@ -6,6 +6,9 @@
     <div class="carousel">
         {% for record in records %}
         <a class="carousel-item" href="{{record.image}}"><img src="{{record.image}}"></a>
+        <div class="overlay">
+            <div class="text">{{record.records}}</div>
+        </div>
       {% endfor %}
     </div>
 
