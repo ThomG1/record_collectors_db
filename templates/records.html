@@ -1,16 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container">
+<div class="container box-mid">
 
-    <!-- <ul class="collapsible expandable">
+    <div class="carousel">
+        {% for record in records %}
+        <a class="carousel-item" href="{{record.image}}"><img src="{{record.image}}"></a>
+      {% endfor %}
+    </div>
+
+        <!-- <ul class="collapsible expandable">
         {% for record in records %}
         <li>
             <div class="collapsible-header">
                 <i class="fas fa-record-vinyl"></i>
                 <strong>{{ record.album_name }}</strong>
             </div>
-
             <div class="collapsible-body">
                 <span>{{record.price}}</span>
                 {% for trade in trading %}
@@ -19,14 +24,7 @@
             </div>
         </li>
         {% endfor %}
-
     </ul> -->
-
-    <div class="carousel">
-        {% for record in records %}
-        <a class="carousel-item" href="{{record.image}}"><img src="{{record.image}}"></a>
-      {% endfor %}
-    </div>
 
 </div>
 
