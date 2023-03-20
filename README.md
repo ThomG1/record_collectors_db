@@ -4,11 +4,6 @@ The Record Collectors Database, is an application for vinyl collectors to organi
 
 As well as allow users to organise their own wishlists, it will to allow the user to communally explore the wishlists and advertisements of other users to create a 'marketplace' feel to the application.  
 
-
-In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
-
-Consider adding a mockup image using the "Am I Responsive" website.
-Here's your deployed site as an example:
 https://ui.dev/amiresponsive?url=https://record-collection-project.herokuapp.com
 
 Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
@@ -25,6 +20,8 @@ To add the image into your README, use this format:
 The central background image of the site is an image of a well-worn collection of records. This should provide a familiarity to the user as it emulates the process of being in a record shop, flipping through sleeves. 
 
 The central background image is enclosed between light brown headers and footers, this is designed to give the feel of a shelf, also aiming at creating familiarity for the user. 
+
+The Home page is laid out around a central carousel, that allows users to flick through entries. 
 
 The profile page is laid out withe users individual collection in three columns. 
 
@@ -47,37 +44,9 @@ I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0
 
 ![screenshot](documentation/coolors.png)
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
-
-```css
-:root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
-}
-```
 
 ### Typography
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Explain any fonts and icon libraries used, like Google Fonts and/or Font Awesome.
-
-Consider adding a link to each font used, and the Font Awesome site if used (or similar icon library).
-
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 - [Neucha](https://fonts.google.com/specimen/Neucha) was used for the primary headers and titles.
 
@@ -87,7 +56,7 @@ Example:
 
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to explore all users entries, so that I can gain inspiration and insight into peoples collections.
 - As a new site user, I would like to create a personalised account, so that I can personalise my record collection .
 - As a new site user, I would like to add new records to my profile, so that I can keep my profile up to date with new purchases or sales I would like to make.
 - As a new site user, I would like to record important features of each item, such as 'genre' and 'price', so that I can create a comprehensive picture of the records I'm exploring.
@@ -110,13 +79,9 @@ Example:
 
 ## Wireframes
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section, display your wireframe screenshots using a Markdown `table`.
 
 Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
@@ -171,54 +136,42 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 ![screenshot](documentation/feature01.png)
 
-- **Feature #2**
+- **Log-In/Log-Out**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - The log-in/log-out feature allows users to enter and exit the application and their data securely. 
 
 ![screenshot](documentation/feature02.png)
 
-- **Profile #3**
+- **Navbar**
+
+    - The navbar allows users to navigate the site, access their profile, add new data, and securely in and out. On smaller screens, this becomes a sidenav, to provide clearer UX. 
+
+![screenshot](documentation/feature02.png)
+
+- **Carousel**
+
+    - The carousel feature allows users to flick through other users entries to the database, displaying the various artworks,which display user data when hovered over. 
+
+![screenshot](documentation/feature02.png)
+
+- **Profile-page**
 
     - The profile page, allows users to organise and view their own collections, including the artwork of each record. It allows users to edit and delete from their own collections.
 
 ![screenshot](documentation/feature03.png)
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Repeat as necessary for as many features as your site contains.
-
-Hint: the more, the merrier!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ### Future Features
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- Cool new feature #1
-    - Any additional notes about this feature.
+- User Messaging
+    - In place of displaying user contact details, a messaging feature would allow users to liase on purchasing or selling items from their collections. 
 - Cool new feature #2
     - Any additional notes about this feature.
 - Cool new feature #3
     - Any additional notes about this feature.
 
 ## Tools & Technologies Used
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section, you should explain the various tools and technologies used to develop the project.
-Make sure to put a link (where applicable) to the source, and explain what each was used for.
-Some examples have been provided, but this is just a sample only, your project might've used others.
-Feel free to delete any unused items below as necessary.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
@@ -242,17 +195,12 @@ Feel free to delete any unused items below as necessary.
 My project uses a non-relational database with MongoDB, and therefore the database architecture
 doesn't have actual relationships like a relational database would.
 
-My database is called **task_manager**.
+My database is called **record_collection**.
 
 It contains 3 collections:
 
-- **categories**
-    | Key | Type | Notes |
-    | --- | --- | --- |
-    | _id | ObjectId() | |
-    | category_name | String | |
 
-- **tasks**
+- **records**
     | Key | Type | Notes |
     | --- | --- | --- |
     | _id | ObjectId() | |
@@ -262,6 +210,12 @@ It contains 3 collections:
     | is_urgent | String | |
     | due_date | String | |
     | created_by | String | selected from the *users* collection |
+
+- **categories**
+    | Key | Type | Notes |
+    | --- | --- | --- |
+    | _id | ObjectId() | |
+    | category_name | String | |
 
 - **users**
     | Key | Type | Notes |
@@ -276,32 +230,9 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-**IMPORTANT:**
-- Be sure to remove all instances of ElephantSQL/PostgreSQL/Flask-Migrate if you've only used a non-relational database with MongoDB
-- Be sure to remove all instances of MongoDB if you've only used a relational database with ElephantSQL/PostgreSQL
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 The live deployed application can be found deployed on [Heroku](https://record-collection-project.herokuapp.com).
 
-### ElephantSQL Relational Database
-
-This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL Database.
-
-To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
-- Click **Create New Instance** to start a new database.
-- Provide a name (this is commonly the name of the project: PLACEHOLDER-NAME).
-- Select the **Tiny Turtle (Free)** plan.
-- You can leave the **Tags** blank.
-- Select the **Region** and **Data Center** closest to you.
-- Once created, click on the new database name, where you can view the database URL and Password.
-
-### MongoDB Non-Relational Database
+### MongoDB Non-Relational Database 
 
 This project uses [MongoDB](https://www.mongodb.com) for the Non-Relational Database.
 
@@ -500,24 +431,8 @@ Use this space to discuss any differences between the local version you've devel
 
 ## Credits
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section you need to reference where you got your content, media, and extra help from.
-It is common practice to use code from other repositories and tutorials,
-however, it is important to be very specific about these sources to avoid plagiarism.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ### Content
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Use this space to provide attribution links to any borrowed code snippets, elements, or resources.
-A few examples have been provided below to give you some ideas.
-
-Ideally, you should provide an actual link to every resource used, not just a generic link to the main site!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 | Source | Location | Notes |
 | --- | --- | --- |
@@ -536,20 +451,6 @@ Ideally, you should provide an actual link to every resource used, not just a ge
 
 ### Media
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Use this space to provide attribution links to any images, videos, or audio files borrowed from online.
-A few examples have been provided below to give you some ideas.
-
-If you're the owner (or a close acquaintance) of all media files, then make sure to specify this.
-Let the assessors know that you have explicit rights to use the media files within your project.
-
-Ideally, you should provide an actual link to every media file used, not just a generic link to the main site!
-The list below is by no means exhaustive. Within the Code Institute Slack community, you can find more "free media" links
-by sending yourself the following command: `!freemedia`.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
 | [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
@@ -564,15 +465,8 @@ by sending yourself the following command: `!freemedia`.
 
 ### Acknowledgements
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
-Use this space to provide attribution to any supports that helped, encouraged, or supported you throughout the development stages of this project.
-A few examples have been provided below to give you some ideas.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- I would like to thank my Code Institute mentor, [John/Jane Doe](https://github.com/username) for their support throughout the development of this project.
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my spouse/partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
+
