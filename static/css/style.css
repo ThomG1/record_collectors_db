@@ -45,6 +45,11 @@ html {
   border: .4rem solid #4D2F29;
 }
 
+.reminder-sub {
+  background-color: white;
+  border: .4rem solid #4D2F29;
+}
+
 
 /* Home Page  */
 .box-mid {
