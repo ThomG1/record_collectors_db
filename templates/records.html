@@ -8,35 +8,49 @@
             {% for record in records %}
             <a class="carousel-item image__img" href="{{record.image}}">
                 <img src="{{record.image}}">
-                    <div class="image__img">
-                        <div class="image__overlay">
-                            {{record.album_name}}
-                        </div>
+                <div class="image__img">
+                    <div class="image__overlay">
+                        {{record.album_name}}
                     </div>
+                </div>
                 </img>
             </a>
             {% endfor %}
         </div>
     </div>
-
-    <!-- <ul class="collapsible expandable">
-        {% for record in records %}
-        <li>
-            <div class="collapsible-header">
-                <i class="fas fa-record-vinyl"></i>
-                <strong>{{ record.album_name }}</strong>
-            </div>
-            <div class="collapsible-body">
-                <span>{{record.price}}</span>
-                {% for trade in trading %}
-                {{ trade.trading_position }}
-                 {% endfor %}
-            </div>
-        </li>
-        {% endfor %}
-    </ul> -->
-
 </div>
+
+<div class="row">
+    <div class="col s6 offset-s6 user-records">
+            <ul class="collapsible expandable">
+                {% for record in records %}
+                <li>
+                    <div class="collapsible-header">
+                        <i class="fas fa-record-vinyl"></i>
+                        <strong>{{ record.album_name }}</strong>
+                    </div>
+                    <div class="collapsible-body">
+                        <span>{{record.price}}</span>
+                        {% for trade in trading %}
+                        {{ trade.trading_position }}
+                        {% endfor %}
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m5">
+      <div class="card-panel">
+        <h4>What We Do</h4>
+        <span>I am a very simple card. I am good at containing small bits of information.
+        I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+        </span>
+      </div>
+    </div>
+  </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
