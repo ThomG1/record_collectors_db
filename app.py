@@ -25,6 +25,13 @@ def get_records():
     return render_template("records.html", records=records)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    records = list(mongo.db.records.find({"$text": {"$search": query}}))
+    return render_template("get_records.html", records=records)
+
+
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
