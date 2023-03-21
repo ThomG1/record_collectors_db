@@ -29,7 +29,7 @@ def get_records():
 def search():
     query = request.form.get("query")
     records = list(mongo.db.records.find({"$text": {"$search": query}}))
-    return render_template("get_records.html", records=records)
+    return render_template("records.html", records=records)
 
 
 @app.route("/signup", methods=["GET", "POST"])
