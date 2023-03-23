@@ -3,40 +3,45 @@
 
 <div class="container box-mid">
     <!-- Carousel -->
-    <div class="image">
-        <div class="carousel">
-            {% for record in records %}
-                <a class="carousel-item modal-trigger" href="#modal-{{record._id}}">
-                    <img src="{{record.image}}" alt="{{record.album_name}}" onerror="this.onerror=null;this.src='{{ url_for("static", filename="images/black-vinyl.jpeg") }}'">
-                    <div class="image__overlay">
-                        {{record.album_name}}
-                    </div>
-                </a>
-                <!-- Modal Structure -->
-                <div id="modal-{{record._id}}" class="modal">
-                    <div class="modal-content">
-                        <h4>{{record.album_name}}</h4>
-                        <p>
-                            Artist Name: {{ record.artist_name }}
-                            <br>
-                            Genre: {{ record.genre }}
-                            <br>
-                            Release Date: {{ record.release_date }}
-                            <br>
-                            Price: {{ record.price }}
-                            <br>
-                            Trading Position: {{ record.trading_position }}
-                            <br>
-                            Contact: {{ record.contact }}
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#!" class="btn modal-close waves-effect waves-green">Close</a>
-                    </div>
+    <div class="carousel">
+        {% for record in records %}
+            <a class="carousel-item modal-trigger" href="#modal-{{ record._id }}">
+                {% if record.image != "" %}
+                    <img src="{{ record.image }}" alt="{{ record.album_name }}">
+                {% else %}
+                    <img src="{{ url_for('static', filename='images/black-vinyl.jpeg') }}" alt="{{ record.album_name }}">
+                {% endif %}
+                <div class="image__overlay">
+                    {{record.album_name}}
                 </div>
-            {% endfor %}
-        </div>
+            </a>
+        {% endfor %}
     </div>
+
+    {% for record in records %}
+        <!-- Modal Structure -->
+        <div id="modal-{{ record._id }}" class="modal">
+            <div class="modal-content">
+                <h4>{{record.album_name}}</h4>
+                <p>
+                    Artist Name: {{ record.artist_name }}
+                    <br>
+                    Genre: {{ record.genre }}
+                    <br>
+                    Release Date: {{ record.release_date }}
+                    <br>
+                    Price: {{ record.price }}
+                    <br>
+                    Trading Position: {{ record.trading_position }}
+                    <br>
+                    Contact: {{ record.contact }}
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="btn modal-close waves-effect waves-green">Close</a>
+            </div>
+        </div>
+    {% endfor %}
 
     <!-- Search bar -->
     <form action="{{ url_for('search') }}" method="post" class="col s12">
