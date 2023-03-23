@@ -36,7 +36,7 @@
         <!--mobile navbar-->
         <ul class="sidenav" id="mobile-demo">
             <li>
-                <h4 class="center-align light-brown-text text-darken 4">Record Collectors Database</h4>
+                <h4 class="center-align light-brown-text text-darken-4">Record Collectors Database</h4>
             </li>
             <li><a href="{{ url_for('get_records') }}">Home</a></li>
             {% if session.user %}
@@ -49,6 +49,17 @@
             {% endif %}
         </ul>
     </header>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <aside class="center-align brown white-text">
+            {% for message in messages %}
+                <h2 class="brown white-text center-align bold">{{ message }}</h2>
+            {% endfor %}
+        </aside>
+    {% endif %}
+    {% endwith %}
     
     <main class="container">
         {% block content %}
