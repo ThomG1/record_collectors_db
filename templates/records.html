@@ -6,77 +6,66 @@
     <div class="image">
         <div class="carousel">
             {% for record in records %}
-            <a class="carousel-item image__img" href="{{record.image}}">
-                <img src="{{record.image}}">
-                <div class="image__img">
+                <a class="carousel-item modal-trigger" href="#modal-{{record._id}}">
+                    <img src="{{record.image}}" alt="{{record.album_name}}" onerror="this.onerror=null;this.src='{{ url_for("static", filename="images/black-vinyl.jpeg") }}'">
                     <div class="image__overlay">
                         {{record.album_name}}
                     </div>
+                </a>
+                <!-- Modal Structure -->
+                <div id="modal-{{record._id}}" class="modal">
+                    <div class="modal-content">
+                        <h4>{{record.album_name}}</h4>
+                        <p>
+                            Artist Name: {{ record.artist_name }}
+                            <br>
+                            Genre: {{ record.genre }}
+                            <br>
+                            Release Date: {{ record.release_date }}
+                            <br>
+                            Price: {{ record.price }}
+                            <br>
+                            Trading Position: {{ record.trading_position }}
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="btn modal-close waves-effect waves-green">Close</a>
+                    </div>
                 </div>
-                </img>
-            </a>
             {% endfor %}
         </div>
     </div>
 
-        <!-- Search bar -->
-        <form action="{{ url_for('search') }}" method="post" class="col s12">
-            <div class="row valign-wrapper center-align">
-                <div class="input-field col s12 m8">
-                    <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
-                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                    <label for="query">Search Records</label>
-                </div>
-                <div class="col s12 m4">
-                    <a href="{{ url_for('get_records') }}" class="red btn text-shadow">Reset</a>
-                    <button type="submit" class="light-blue darken-1 btn text-shadow">
-                        <i class="fas fa-search left"></i> Search
-                    </button>
-                </div>
+    <!-- Search bar -->
+    <form action="{{ url_for('search') }}" method="post" class="col s12">
+        <div class="row valign-wrapper center-align">
+            <div class="input-field col s12 m8">
+                <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+                <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                <label for="query">Search Records</label>
             </div>
-        </form>
+            <div class="col s12 m4">
+                <a href="{{ url_for('get_records') }}" class="red btn text-shadow">Reset</a>
+                <button type="submit" class="light-blue darken-1 btn text-shadow">
+                    <i class="fas fa-search left"></i> Search
+                </button>
+            </div>
+        </div>
+    </form>
 
 </div>
-
-<!-- Collapsible container -->
-<!-- <div class="row">
-    <div class="col s6 offset-s6 user-records">
-            <ul class="collapsible expandable">
-                {% for record in records %}
-                <li>
-                    <div class="collapsible-header">
-                        <i class="fas fa-record-vinyl"></i>
-                        <strong>{{ record.album_name }}</strong>
-                    </div>
-                    <div class="collapsible-body">
-                        <span>{{record.price}}</span>
-                        {% for trade in trading %}
-                        {{ trade.trading_position }}
-                        {% endfor %}
-                    </div>
-                </li>
-                {% endfor %}
-            </ul>
-    </div>
-</div> -->
 
 <!-- About -->
 <div class="row">
     <div class="col s12 m5">
-      <div class="card-panel">
-        <h4>About</h4>
-        <span>I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
-        </span>
-      </div>
+        <div class="card-panel">
+            <h4>About</h4>
+            <span>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. I am similar to what is called a
+                panel in other frameworks.
+            </span>
+        </div>
     </div>
-  </div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var elems = document.querySelectorAll('.carousel');
-        var instances = M.Carousel.init(elems, options);
-    });
-</script>
+</div>
 
 {% endblock %}
