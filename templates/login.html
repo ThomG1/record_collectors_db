@@ -1,47 +1,47 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align reminder-sub">Log In</h3>
+<h3 class="center-align reminder-sub">Log In</h3>
 
-    <div class="row">
-        
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
-            <div class="card">
-                <!-- username -->
-                <div class="row">
-					<div class="input-field col s12">
-						<i class="fas fa-user-circle prefix"></i>
-						<input id="username" name="username" type="text" minlength="5"
-                            maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-						<label for="username">Username</label>
-					</div>
-                </div>
-                <!-- passowrd -->
-                <div class="row">
-                    <div class="input-field col s12">
-						<i class="fas fa-key prefix"></i>
-                        <input id="password" name="password" type="password" minlength="5"
-                            maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                        <label for="password">Password</label>
-                    </div>
-                </div>
-                <!-- login -->
-                <div class="row">
-                    <button type="submit" class="col s12 btn-large brown darken-3 text-shadow all-buttons">
-                        Log In <i class="fas fa-sign-in-alt white-text"></i>
-                    </button>
+<div class="row">
+
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
+        <div class="card">
+            <!-- username -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-circle prefix"></i>
+                    <input id="username" name="username" type="text" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for="username">Username</label>
                 </div>
             </div>
-        </form>
-    </div>
-
-    <div class="row container reminder-sub">
-        <div class="col s12">
-            <p class="center-align">
-                New Here?
-                <a href="{{ url_for('signup') }}" class="orange-text text-darken-4">Sign-Up</a>
-            </p>
+            <!-- passowrd -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-key prefix"></i>
+                    <input id="password" name="password" type="password" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <!-- login -->
+            <div class="row">
+                <button type="submit" class="col s12 btn-large brown darken-3 text-shadow all-buttons">
+                    Log In <i class="fas fa-sign-in-alt white-text"></i>
+                </button>
+            </div>
         </div>
+    </form>
+</div>
+<!-- login redirect -->
+<div class="row container reminder-sub">
+    <div class="col s12">
+        <p class="center-align">
+            New Here?
+            <a href="{{ url_for('signup') }}" class="orange-text text-darken-4">Sign-Up</a>
+        </p>
     </div>
+</div>
 
 {% endblock %}

@@ -2,7 +2,7 @@
 {% block content %}
 
 <div class="container box-mid">
-
+    <!-- Carousel -->
     <div class="image">
         <div class="carousel">
             {% for record in records %}
@@ -19,7 +19,7 @@
         </div>
     </div>
 
-
+        <!-- Search bar -->
         <form action="{{ url_for('search') }}" method="post" class="col s12">
             <div class="row valign-wrapper center-align">
                 <div class="input-field col s12 m8">
@@ -38,7 +38,8 @@
 
 </div>
 
-<div class="row">
+<!-- Collapsible container -->
+<!-- <div class="row">
     <div class="col s6 offset-s6 user-records">
             <ul class="collapsible expandable">
                 {% for record in records %}
@@ -57,12 +58,13 @@
                 {% endfor %}
             </ul>
     </div>
-</div>
+</div> -->
 
+<!-- About -->
 <div class="row">
     <div class="col s12 m5">
       <div class="card-panel">
-        <h4>What We Do</h4>
+        <h4>About</h4>
         <span>I am a very simple card. I am good at containing small bits of information.
         I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
         </span>
