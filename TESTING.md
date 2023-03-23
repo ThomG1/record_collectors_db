@@ -2,26 +2,7 @@
 
 Return back to the [README.md](README.md) file.
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section, you need to convince the assessors that you have conducted enough testing to legitimately believe that the site works well.
-Essentially, in this part, you should go over all of your project's features, and ensure that they all work as intended,
-with the project providing an easy and straightforward way for the users to achieve their goals.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ## Code Validation
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Use the space to discuss code validation for any of your own code files (where applicable).
-You are not required to validate external libraries/frameworks, such as imported Bootstrap, Materialize, Font Awesome, etc.
-
-**IMPORTANT**: You must provide a screenshot for each file you validate.
-
-**PRO TIP**: Always validate the live site pages, not your local code. There could be subtle/hidden differences.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ### HTML
 
@@ -257,11 +238,9 @@ Consider testing at least 3 different browsers, if available on your system.
 
 Recommended browsers to consider:
 - [Chrome](https://www.google.com/chrome)
-- [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer)
-- [Edge](https://www.microsoft.com/edge)
+- [Firefox](https://www.mozilla.org/firefox)
 - [Safari](https://support.apple.com/downloads/safari)
-- [Brave](https://brave.com/download)
-- [Opera](https://www.opera.com/download)
+
 
 **IMPORTANT**: You must provide screenshots of the tested browsers, to "prove" that you've actually tested them.
 
@@ -279,11 +258,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | --- | --- | --- |
 | Chrome | ![screenshot](documentation/browser-chrome.png) | Works as expected |
 | Firefox | ![screenshot](documentation/browser-firefox.png) | Works as expected |
-| Edge | ![screenshot](documentation/browser-edge.png) | Works as expected |
 | Safari | ![screenshot](documentation/browser-safari.png) | Minor CSS differences |
-| Brave | ![screenshot](documentation/browser-brave.png) | Works as expected |
-| Opera | ![screenshot](documentation/browser-opera.png) | Minor differences |
-| Internet Explorer | ![screenshot](documentation/browser-iex.png) | Does not work as expected |
 | x | x | repeat for any other tested browsers |
 
 ## Responsiveness
@@ -393,7 +368,19 @@ Defensive programming was manually tested with the below user acceptance testing
 | Home Page | | | | |
 | | Click on Logo | Redirection to Home page | Pass | |
 | | Click on Home link in navbar | Redirection to Home page | Pass | |
-| Gallery Page | | | | |
+| | Click on Profile link in navbar | Redirection to Profile page | Pass | |
+| | Click on New Record link in navbar | Redirection to New Record page | Pass | |
+| | Click on Logout link in navbar | Redirection to Logout page | Pass | |
+| | Click on Login link in navbar | Redirection to Login page | Pass | |
+| | Click on Signup link in navbar | Redirection to Signup page | Pass | |
+| | Hover on carousel image | Display hover effect, while retreiving album name from database | Pass | |
+| | Click on carousel image | Opens modal that retrieves data from database | Pass | |
+| | Scroll through carousel images | Move through different images in carousel | Pass | |
+| | Enter text in search bar | Allow user to search for specific albums from database | Pass | |
+| | Enter text in search bar | Allow user to search for specific albums from database | Pass | |
+| | Click search button / Press Enter | Allow user to search for specific albums from database | Pass | |
+| | Reset search bar | Allow user to reset search bar | Pass | |
+| Profile Page | | | | |
 | | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
 | | Load gallery images | All images load as expected | Pass | |
 | Contact Page | | | | |
