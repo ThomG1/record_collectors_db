@@ -66,13 +66,12 @@ def login():
 
         if existing_user:
             # ensure hashed password matches user input
-            if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(
-                        request.form.get("username")))
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
+            if check_password_hash(existing_user["password"], request.form.get("password")):  # noqa
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
+                    request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -95,7 +94,8 @@ def profile(username):
     records = mongo.db.records.find({"user": username})
     trading = mongo.db.trading.find().sort("trading_position", 1)
     genres = mongo.db.genres.find().sort("genre", 1)
-    return render_template("profile.html", username=username, records=records, genres=genres)
+    return render_template(
+        "profile.html", username=username, records=records, genres=genres)
 
 
 @app.route("/logout")
@@ -119,12 +119,12 @@ def new_record():
             "price": request.form.get("price"),
             "contact": request.form.get("contact"),
             "image": request.form.get("image"),
-            "user": session["user"]        
+            "user": session["user"]
         }
         mongo.db.records.insert_one(record)
         flash("Record Successfully Added")
         return redirect(url_for("get_records"))
-        
+
     trading = mongo.db.trading.find().sort("trading_position", 1)
     genres = mongo.db.genres.find().sort("genre", 1)
     return render_template("new_record.html", trading=trading, genres=genres)
@@ -144,15 +144,17 @@ def edit_record(record_id):
             "price": request.form.get("price"),
             "contact": request.form.get("contact"),
             "image": request.form.get("image"),
-            "user": session["user"]          
+            "user": session["user"]
         }
-        mongo.db.records.update_one({"_id": ObjectId(record_id)}, {"$set": submit })
+        mongo.db.records.update_one(
+            {"_id": ObjectId(record_id)}, {"$set": submit})
         flash("Record Updated")
 
     record = mongo.db.records.find_one({"_id": ObjectId(record_id)})
     trading = mongo.db.trading.find().sort("trading_position", 1)
     genres = mongo.db.genres.find().sort("genre", 1)
-    return render_template("edit_record.html", record=record, trading=trading, genres=genres)
+    return render_template(
+        "edit_record.html", record=record, trading=trading, genres=genres)
 
 
 @app.route("/delete_record/<record_id>")
