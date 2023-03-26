@@ -73,27 +73,23 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ### Home Page Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-home.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-home.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-home.png) |
+
+[Home Wireframe](documentation/wireframes/home-wf-1.png) 
+
 
 ### Profile Page Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-about.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-about.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-about.png) |
+
+[Profile Wireframe](documentation/wireframes/profile-wf-1.png) 
+
+### New Record / Edit Record Wireframes
+
+
+[New / Edit Record Wireframe](documentation/wireframes/newedit-wf-1.png) 
 
 ### Verification Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-contact.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-contact.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-contact.png) |
+[Verification Wireframe](documentation/wireframes/verification-wf-1.png)
 
 
 ## Features
