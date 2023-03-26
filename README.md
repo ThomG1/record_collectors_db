@@ -56,8 +56,6 @@ The site primarily uses three simple colours: Brown for backgrounds, white for m
 - As a returning site user, I would like to log in and out of my account, so that I can ensure only I have access to the records I have added.
 - As a returning site user, I would like to update a record, so that I can keep up to do date with changes, such as the price.
 - As a returning site user, I would like to delete a record, so that I can remove records I may have bought, sold, or no longer want.
-- As a returning site user, I would like to ____________, so that I can ____________.
-
 
 ### Site Admin
 
@@ -74,22 +72,21 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 ### Home Page Wireframes
 
 
-[Home Wireframe](documentation/wireframes/home-wf-1.png) 
-
+![Home Wireframe](documentation/wireframes/home-wf-1.png)
 
 ### Profile Page Wireframes
 
 
-[Profile Wireframe](documentation/wireframes/profile-wf-1.png) 
+![Profile Wireframe](documentation/wireframes/profile-wf-1.png) 
 
 ### New Record / Edit Record Wireframes
 
 
-[New / Edit Record Wireframe](documentation/wireframes/newedit-wf-1.png) 
+![New / Edit Record Wireframe](documentation/wireframes/newedit-wf-1.png) 
 
 ### Verification Wireframes
 
-[Verification Wireframe](documentation/wireframes/verification-wf-1.png)
+![Verification Wireframe](documentation/wireframes/verification-wf-1.png)
 
 
 ## Features
