@@ -330,36 +330,6 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 ## Defensive Programming
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Defensive programming (defensive design) is extremely important!
-
-When building projects that accept user inputs or forms, you should always test the level of security for each.
-Examples of this could include (not limited to):
-
-Forms:
-- Users cannot submit an empty form
-- Users must enter valid email addresses
-
-PP3 (Python-only):
-- Users must enter a valid letter/word/string when prompted
-- Users must choose from a specific list only
-
-Flask/Django:
-- Users cannot brute-force a URL to navigate to a restricted page
-- Users cannot perform CRUD functionality while logged-out
-- User-A should not be able to manipulate data belonging to User-B, or vice versa
-- Non-Authenticated users should not be able to access pages that require authentication
-- Standard users should not be able to access pages intended for superusers
-
-You'll want to test all functionality on your application, whether it's a standard form,
-or uses CRUD functionality for data manipulation on a database.
-Make sure to include the `required` attribute on any form-fields that should be mandatory.
-Try to access various pages on your site as different user types (User-A, User-B, guest user, admin, superuser).
-
-You should include any manual tests performed, and the expected results/outcome.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 Defensive programming was manually tested with the below user acceptance testing:
 
@@ -377,15 +347,21 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on carousel image | Opens modal that retrieves data from database | Pass | |
 | | Scroll through carousel images | Move through different images in carousel | Pass | |
 | | Enter text in search bar | Allow user to search for specific albums from database | Pass | |
-| | Enter text in search bar | Allow user to search for specific albums from database | Pass | |
 | | Click search button / Press Enter | Allow user to search for specific albums from database | Pass | |
 | | Reset search bar | Allow user to reset search bar | Pass | |
 | Profile Page | | | | |
-| | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
-| | Load gallery images | All images load as expected | Pass | |
-| Contact Page | | | | |
-| | Click on Contact link in navbar | Redirection to Contact page | Pass | |
-| | Enter first/last name | Field will accept freeform text | Pass | |
+| | Click on edit button for each item | Redirects user to edit record page | Pass | |
+| | Click on delete button for each item | Triggers confirmation modal |Pass | |
+| | Click on delete button on modal| Deletes item | Pass | |
+| New Record Page | | | | |
+| | Select trading position | Field will accept from dropdown menu| Pass | |
+| | Enter album name | Field will accept freeform text | Pass | |
+| | Enter artist name | Field will accept freeform text | Pass | |
+| | Select genre | Field will accept from dropdown menu | Pass | |
+| | Select release date  | Field will accept from calender | Pass | |
+| | Enter artwork URL | Field will accept url | Pass | |
+| | Enter contact option | Field will accept freeform text, so user can choose between email / social media / phone etc | Pass | |
+| | Click add new record button| Adds new record | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
 | | Enter message in textarea | Field will accept freeform text | Pass | |
 | | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
@@ -409,12 +385,6 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
 | | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Repeat for all other tests, as applicable to your own site.
-The aforementioned tests are just an example of a few different project scenarios.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ## User Story Testing
 
