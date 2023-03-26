@@ -2,6 +2,7 @@
 {% block content %}
 
 <div class="container box-mid">
+    <!-- <h3 class="records-heading">All Records</h3> -->
     <!-- Carousel -->
     <div class="carousel">
         {% for record in records %}
@@ -53,7 +54,7 @@
             </div>
             <div class="col s12 m4">
                 <a href="{{ url_for('get_records') }}" class="red btn text-shadow">Reset</a>
-                <button type="submit" class="light-blue darken-1 btn text-shadow">
+                <button type="submit" class="light-blue darken-1 btn text-shadow all-buttons">
                     <i class="fas fa-search left"></i> Search
                 </button>
             </div>
@@ -63,15 +64,17 @@
 </div>
 
 <!-- About -->
-<div class="row">
-    <div class="col s12 m5">
-        <div class="card-panel">
-            <h4>About</h4>
-            <span>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively. I am similar to what is called a
-                panel in other frameworks.
-            </span>
-        </div>
+<!-- Modal Trigger -->
+<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
 </div>
 

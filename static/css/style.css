@@ -101,6 +101,10 @@ html {
 .image__overlay:hover>* {
 	transform: translateY(0);
 }
+
+.records-heading {
+  text-align: center;
+}
 /* Profile Page  */
 
 .card-panel {
