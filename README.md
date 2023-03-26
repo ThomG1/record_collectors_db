@@ -6,11 +6,6 @@ As well as allow users to organise their own wishlists, it will to allow the use
 
 https://ui.dev/amiresponsive?url=https://record-collection-project.herokuapp.com
 
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
 
 ![screenshot](documentation/mockup.png)
 
@@ -29,18 +24,13 @@ The profile page is laid out withe users individual collection in three columns.
 ### Colour Scheme
 
 
-- `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
-
+- `#FFFFFFF` used for primary text.
+- `#4E342E` used for main background. 
+- `#131622` used for secondary text.
 
 I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
+
+The site primarily uses three simple colours: Brown for backgrounds, white for main text and text backgrounds, black for secondary text. As the site feautures a main background image of a record collection, this naturally features colour organically from the sleeves, complimenting the minimal useage throughout the site. 
 
 ![screenshot](documentation/coolors.png)
 
@@ -71,17 +61,12 @@ I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0
 
 ### Site Admin
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As a site administrator, I should be able to view all the entries created on the database, so that I can analyse and understand the data.
+- As a site administrator, I would like the site to be visually appealing on any device. 
+- As a site administrator, I should be able to edit the data directly from the database.
+
 
 ## Wireframes
-
-
-Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
-
 
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
@@ -94,7 +79,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Tablet | ![screenshot](documentation/wireframes/tablet-home.png) |
 | Desktop | ![screenshot](documentation/wireframes/desktop-home.png) |
 
-### About Page Wireframes
+### Profile Page Wireframes
 
 | Size | Screenshot |
 | --- | --- |
@@ -102,7 +87,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Tablet | ![screenshot](documentation/wireframes/tablet-about.png) |
 | Desktop | ![screenshot](documentation/wireframes/desktop-about.png) |
 
-### Contact Page Wireframes
+### Verification Wireframes
 
 | Size | Screenshot |
 | --- | --- |
@@ -112,21 +97,6 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 
 ## Features
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ### Existing Features
 
@@ -150,7 +120,7 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 - **Carousel**
 
-    - The carousel feature allows users to flick through other users entries to the database, displaying the various artworks,which display user data when hovered over. 
+    - The carousel is the main feature of the site. This feature allows users to flick through other users entries to the database, displaying the various artworks,which displays the album name when hovered over. When this is clicked, it triggers a modal that brings up the data associated with that album, allowing the user to gather the information they need. The carousel section features a search bar, allowing users to search by album or artist name. 
 
 ![screenshot](documentation/feature02.png)
 
@@ -197,25 +167,34 @@ doesn't have actual relationships like a relational database would.
 
 My database is called **record_collection**.
 
-It contains 3 collections:
+It contains 4 collections:
 
 
 - **records**
     | Key | Type | Notes |
     | --- | --- | --- |
     | _id | ObjectId() | |
-    | category_name | String | selected from *categories* collection |
-    | task_name | String | |
-    | task_description | String | |
-    | is_urgent | String | |
-    | due_date | String | |
-    | created_by | String | selected from the *users* collection |
+    | trading_position | String | selected from the *trading* collection |
+    | album_name | String | |
+    | artist_name | String | |
+    | genre | String | selected from the *genres* collection |
+    | release_date | String | |
+    | price | String | |
+    | contact | String | |
+    | image | String | Users provide a URL |
+    | user | String | selected from the *users* collection |
 
-- **categories**
+- **genre**
     | Key | Type | Notes |
     | --- | --- | --- |
     | _id | ObjectId() | |
-    | category_name | String | |
+    | genre| String | |
+
+- **trading**
+    | Key | Type | Notes |
+    | --- | --- | --- |
+    | _id | ObjectId() | |
+    | trading_position | String | |
 
 - **users**
     | Key | Type | Notes |
@@ -421,14 +400,6 @@ You can fork this repository by using the following steps:
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
-### Local VS Deployment
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Use this space to discuss any differences between the local version you've developed, and the live deployment site on Heroku.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ## Credits
 
 ### Content
@@ -437,36 +408,21 @@ Use this space to discuss any differences between the local version you've devel
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder by Tim Nelson](https://traveltimn.github.io/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
-| [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
-| [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
-| [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
-| [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
-| [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
-| [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
-| [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-| [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
-| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
-| [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
-| [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
+
 
 ### Media
 
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-| [Lorem Picsum](https://picsum.photos) | home page | image | hero image background |
-| [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
-| [Pixabay](https://pixabay.com) | gallery page | image | group of photos for gallery |
-| [Wallhere](https://wallhere.com) | footer | image | background wallpaper image in the footer |
-| [This Person Does Not Exist](https://thispersondoesnotexist.com) | testimonials | image | headshots of fake testimonial images |
-| [Audio Micro](https://www.audiomicro.com/free-sound-effects) | game page | audio | free audio files to generate the game sounds |
-| [Videvo](https://www.videvo.net/) | home page | video | background video on the hero section |
+| [Unsplash](https://unsplash.com/photos/5j7nQv-jaVM) | product page | image | record collection image |
 | [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
+| [Phonica Records](https://www.phonicarecords.com/product/ddan-the-danger-zone-lobster-theremin-black-label/142243) | entire site | image | default artwork image |
+
 
 ### Acknowledgements
 
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
-- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support.
 
