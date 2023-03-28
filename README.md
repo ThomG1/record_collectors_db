@@ -95,7 +95,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 - **Sign-Up**
 
-    - The 'Sign-Up' feature is the spine of the application, allowing users to create an account to begin adding records to their collection.
+    - The 'Sign-Up' feature is the initial interaction most users will encounter, allowing users to create an account to begin adding records to their collection.
 
 ![screenshot](documentation/signup.png)
 
@@ -116,6 +116,30 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
     - The carousel is the main feature of the site. This feature allows users to flick through other users entries to the database, displaying the various artworks,which displays the album name when hovered over. When this is clicked, it triggers a modal that brings up the data associated with that album, allowing the user to gather the information they need. The carousel section features a search bar, allowing users to search by album or artist name. 
 
 ![screenshot](documentation/carousel.png)
+
+- **Default-Image**
+
+    - Visible on the carousel, where a user has not entered an image in the 'new record' page, there will be a 'default' image displayed to ensure the site remains visually interesting for users. 
+
+![screenshot](documentation/default.png)
+
+- **New-Record**
+
+    - Allows user to create a new record. 
+
+![screenshot](documentation/new-record.png)
+
+- **Edit-Record**
+
+    - Allows user to edit a record. The edit button is located on the profile page on each item. 
+
+![screenshot](documentation/edit-record.png)
+
+- **Delete**
+
+    - Allows user to delete a record. Includes a modal to confirm user intends to delete item. 
+
+![screenshot](documentation/edit-record.png)
 
 - **Profile-page**
 
