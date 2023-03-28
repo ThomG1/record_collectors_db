@@ -1,3 +1,5 @@
+/* jshint esversion: 11, jquery: true */
+
 /*
     jQuery for MaterializeCSS initialization
 */
