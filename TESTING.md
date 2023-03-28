@@ -10,35 +10,17 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FThomG1.github.io%2Frecord_collectors_db%2Findex.html) | ![screenshot](documentation/html-validation-home.png) | Section lacks header h2-h6 warning |
-| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FThomG1.github.io%2Frecord_collectors_db%2Fcontact.html) | ![screenshot](documentation/html-validation-contact.png) | obsolete iframe warnings |
-| Quiz | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FThomG1.github.io%2Frecord_collectors_db%2Fquiz.html) | ![screenshot](documentation/html-validation-quiz.png) | Pass: No Errors |
-| Add Blog | n/a | ![screenshot](documentation/html-validation-add-blog.png) | Duplicate IDs found, and fixed |
-| Checkout | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining HTML files |
+| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecord-collection-project.herokuapp.com) | ![screenshot](documentation/home-validation.png) | Pass: No Errors |
+| Login | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecord-collection-project.herokuapp.com%2Flogin) | ![screenshot](documentation/login-validation.png) | Pass: No Errors |
+| Signup | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecord-collection-project.herokuapp.com%2Fsignup) | ![screenshot](documentation/sign-up-validation.png) | Pass: No Errors |
+| Profile | [W3C](https://validator.w3.org) | ![screenshot](documentation/profile-validation.png) | One error: This can be ignored as it relates to the default image in place |
+| New Record | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecord-collection-project.herokuapp.com%2Fnew_record) | ![screenshot](documentation/new-record-validation.png) | Pass: No Errors |
+| Edit Record | [W3C](https://validator.w3.org) | ![screenshot](documentation/new-record-validation.png) | Pass: No Errors |
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
-**IMPORTANT**: Python/Jinja syntax in HTML
 
-Python projects that use Jinja syntax, such as `{% for loops %}`, `{% url 'home' %}`, and `{{ variable|filter }}`
-will not validate properly if you're copying/pasting into the HTML validator.
 
-In order to properly validate these types of files, it's recommended to
-[validate by uri](https://validator.w3.org/#validate_by_uri) from the deployed Heroku pages.
 
-Unfortunately, pages that require a user to be logged-in and authenticated (CRUD functionality),
-will not work using this method, due to the fact that the HTML Validator (W3C) doesn't have
-access to login to your pages.
-In order to properly validate HTML pages with Jinja syntax for authenticated pages, follow these steps:
-
-- Navigate to the deployed pages which require authentication
-- Right-click anywhere on the page, and select **View Page Source** (usually `CTRL+U` or `⌘+U` on Mac).
-- This will display the entire "compiled" code, without any Jinja syntax.
-- Copy everything, and use the [validate by input](https://validator.w3.org/#validate_by_input) method.
-- Repeat this process for every page that requires a user to be logged-in/authenticated.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ### CSS
 
@@ -71,146 +53,31 @@ Sample CSS code validation documentation (tables are extremely helpful!):
 
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2FThomG1.github.io%2Frecord_collectors_db) | ![screenshot](documentation/css-validation-style.png) | Pass: No Errors |
-| checkout.css | n/a | ![screenshot](documentation/css-validation-checkout.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining CSS files |
+| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frecord-collection-project.herokuapp.com%2Fget_records&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/css-validation-style.png) | One Error due to materialize css |
+
+Note: when the code is copies and pasted, it displays no errors. 
+
+
 
 ### JavaScript
 
 I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
-If using modern JavaScript (ES6) methods, then make sure to include the following
-line at the very top of every single JavaScript file (this should remain in your files for submission):
-
-    /* jshint esversion: 11 */
-
-If you are also including jQuery (`$`), then the updated format will be:
-
-    /* jshint esversion: 11, jquery: true */
-
-This allows the JShint validator to recognize modern ES6 methods, such as:
-`let`, `const`, `template literals`, `arrow functions (=>)`, etc.
-
-**IMPORTANT**: External resources
-
-Sometimes we'll write JavaScript that imports variables from other files, such as an array of questions
-from `questions.js`, which are used within the main `script.js` file elsewhere.
-If that's the case, the JShint validation tool doesn't know how to recognize unused variables
-that would normally be imported locally in your code.
-These warnings are acceptable to showcase on your screenshots.
-
-The same thing applies when using external libraries such as Stripe, Leaflet, Bootstrap, Materialize, etc..
-To instantiate these components, we need to use their respective declarator.
-Again, the JShint validation tool would flag these as undefined/unused variables.
-These warnings are acceptable to showcase on your screenshots.
-
-Sample JS code validation documentation (tables are extremely helpful!):
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| script.js | ![screenshot](documentation/js-validation-script.png) | Unused variables from external files |
-| questions.js | ![screenshot](documentation/js-validation-questions.png) | Pass: No Errors |
-| quiz.js | ![screenshot](documentation/js-validation-quiz.png) | Unused variables from external files |
-| stripe_elements.js | ![screenshot](documentation/js-validation-stripe.png) | Undefined Stripe variable |
-| x | x | x | repeat for all remaining JavaScript files |
+| script.js | ![screenshot](documentation/js-validation-1.png) | Unused variables from external files |
+| script.js | ![screenshot](documentation/js-validation-2.png) | Unused variables from external files |
+
 
 ### Python
 
 I have used the recommended [CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-The CI Python Linter can be used two different ways.
-- Copy/Paste your Python code directly into the linter.
-- As an API, using the "raw" URL appended to the linter URL.
-    - To find the "raw" URL, navigate to your file directly on the GitHub repo.
-    - On that page, GitHub provides a button on the right called "Raw" that you can click on.
-    - From that new page, copy the full URL, and paste it after the CI Python Linter URL (with a `/` separator).
-    - Examples:
-
-    | File | CI URL | Raw URL | Combined |
-    | --- | --- | --- | --- |
-    | PP3 *run.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/ThomG1/record_collectors_db/main/run.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/ThomG1/record_collectors_db/main/run.py |
-    | Boutique Ado *settings.py* | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/ThomG1/record_collectors_db/main/boutique_ado/settings.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/ThomG1/record_collectors_db/main/boutique_ado/settings.py |
-
-It's recommended to validate each file using the API URL.
-This will give you a custom URL which you can use on your testing documentation.
-It makes it easier to return back to a file to validate it again in the future.
-Use the steps above to generate your own custom URLs for each Python file.
-
-**IMPORTANT**: Django settings.py
-
-The Django settings.py file comes with 4 lines that are quite long, and will throw the `E501 line too long` error.
-This is default behavior, but can be fixed by adding `# noqa` to the end of those lines.
-
-`noqa` = **NO Quality Assurance**
-
-Example:
-
-```python
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",  # noqa
-    },
-]
-```
-
-**NOTE**: You must include 2 *spaces* before the `#`, and 1 *space* after the `#`.
-
-Do not use `# noqa` all over your project just to clear down validation errors!
-This can still cause a project to fail, for failing to fix actual PEP8 validation errors.
-
-Sometimes strings or variables get too long, or long `if` conditional statements.
-These are acceptable instances to use the `# noqa`.
-
-When trying to fix "line too long" errors, try to avoid using `/` to split lines.
-A better approach would be to use any type of opening bracket, and hit Enter just after that.
-Any opening bracket type will work: `(`, `[`, `{`.
-By using an opening bracket, Python knows where to appropriately indent the next line of code,
-without having to "guess" yourself and attempt to tab to the correct indentation level.
-
-Example:
-
-```python
-return HttpResponse(
-    content=(
-        f'Webhook received: {event["type"]} | '
-        'SUCCESS: Verified order already in database'
-    ),
-    status=200
-)
-```
-
-**IMPORTANT**: migration and pycache files
-
-You do not have to ever validate files from the `migrations/` or `pycache/` folders!
-Ignore these `.py` files, and validate just the files that you've created or modified.
-
-Sample Python code validation documentation (tables are extremely helpful!):
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/ThomG1/record_collectors_db/main/run.py) | ![screenshot](documentation/py-validation-run.png) | W291 trailing whitespace |
-| settings.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/ThomG1/record_collectors_db/main/boutique-ado/settings.py) | ![screenshot](documentation/py-validation-settings.png) | E501 line too long |
-| Blog views.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/ThomG1/record_collectors_db/main/blog/views.py) | ![screenshot](documentation/py-validation-blog-views.png) | Pass: No Errors |
-| Checkout urls.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/ThomG1/record_collectors_db/main/checkout/urls.py) | ![screenshot](documentation/py-validation-checkout-urls.png) | W292 no newline at end of file |
-| Profiles models.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/ThomG1/record_collectors_db/main/profiles/models.py) | ![screenshot](documentation/py-validation-profiles-models.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining Python files |
+| app.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/ThomG1/record_collectors_db/main/app.py) | ![screenshot](documentation/python-validation.png) | Pass: No Errors |
 
 ## Browser Compatibility
 
@@ -243,30 +110,10 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Chrome | ![screenshot](documentation/browser-chrome.png) | Works as expected |
 | Firefox | ![screenshot](documentation/browser-firefox.png) | Works as expected |
 | Safari | ![screenshot](documentation/browser-safari.png) | Minor CSS differences |
-| x | x | repeat for any other tested browsers |
+
 
 ## Responsiveness
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Use this space to discuss testing the live/deployed site on various device sizes.
-
-The minimum requirement is for the following 3 tests:
-- Mobile
-- Tablet
-- Desktop
-
-**IMPORTANT**: You must provide screenshots of the tested responsiveness, to "prove" that you've actually tested them.
-
-Using the "amiresponsive" mockup image (or similar) does not suffice the requirements.
-Consider using some of the built-in device sizes in the Developer Tools.
-
-If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well.
-It showcases a higher level of manual tests, and can be seen as a positive inclusion!
-
-Sample responsiveness testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 I've tested my deployed project on multiple devices to check for responsiveness issues.
 
