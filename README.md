@@ -401,6 +401,9 @@ You can fork this repository by using the following steps:
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder by Tim Nelson](https://traveltimn.github.io/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
+| [Image Hover Text Overlay Effect with HTML & CSS - Web Design Tutorial](https://www.youtube.com/watch?v=exb2ab72Xhs) | Hover Effect over carousel | Help building hover effect on carousel |
+| [Task Manager Project](https://codeinstitute.net/) | Code Institute walkthrough project | Used for a basis for the site |
+
 
 
 ### Media
