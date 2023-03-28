@@ -97,25 +97,25 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
     - The 'Sign-Up' feature is the spine of the application, allowing users to create an account to begin adding records to their collection.
 
-![screenshot](documentation/feature01.png)
+![screenshot](documentation/signup.png)
 
 - **Log-In/Log-Out**
 
     - The log-in/log-out feature allows users to enter and exit the application and their data securely. 
 
-![screenshot](documentation/feature02.png)
+![screenshot](documentation/login.png)
 
 - **Navbar**
 
     - The navbar allows users to navigate the site, access their profile, add new data, and securely in and out. On smaller screens, this becomes a sidenav, to provide clearer UX. 
 
-![screenshot](documentation/feature02.png)
+![screenshot](documentation/navbar.png)
 
 - **Carousel**
 
     - The carousel is the main feature of the site. This feature allows users to flick through other users entries to the database, displaying the various artworks,which displays the album name when hovered over. When this is clicked, it triggers a modal that brings up the data associated with that album, allowing the user to gather the information they need. The carousel section features a search bar, allowing users to search by album or artist name. 
 
-![screenshot](documentation/feature02.png)
+![screenshot](documentation/carousel.png)
 
 - **Profile-page**
 
