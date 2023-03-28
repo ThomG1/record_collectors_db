@@ -105,6 +105,12 @@ html {
 .records-heading {
   text-align: center;
 }
+
+
+about-mod {
+  align-items: center;
+  width:130px;
+}
 /* Profile Page  */
 
 .card-panel {
