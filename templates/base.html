@@ -53,9 +53,9 @@
     <!-- Flash Messages -->
     {% with messages = get_flashed_messages() %}
     {% if messages %}
-        <aside class="center-align brown white-text">
+        <aside class="center-align">
             {% for message in messages %}
-                <h2 class="brown white-text center-align bold">{{ message }}</h2>
+                <h2 class="reminder-sub">{{ message }}</h2>
             {% endfor %}
         </aside>
     {% endif %}
