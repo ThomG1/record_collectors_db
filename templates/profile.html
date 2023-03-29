@@ -28,9 +28,9 @@
         <br>
         Trading Position: {{ record.trading_position }}
         {% if record.image != "" %}
-        <img src="{{ record.image }}" alt="{{ record.album_name }}" class="profile-img">
+        <img src="{{ record.image }}" alt="{{ record.album_name }}" class="profile-img responsive-img">
         {% else %}
-        <img src="{{ url_for('static', filename='images/black-vinyl.jpeg') }}" alt="{{ record.album_name }}" class="profile-img">
+        <img src="{{ url_for('static', filename='images/black-vinyl.jpeg') }}" alt="{{ record.album_name }}" class="profile-img responsive-img">
         {% endif %}
        
         <!-- Edit Trigger -->
