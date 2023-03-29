@@ -31,11 +31,9 @@ html {
 }
 
 .user-records {
-  border: .2rem solid #4D2F29;
   font-size: 1 rem;
   padding: 1rem .5rem;
   text-align: center;
-  background-color: white;
   color: black;
 }
 
@@ -106,4 +104,8 @@ html {
 
 .card-panel {
   border: .4rem solid #4D2F29;
+}
+
+.profile-img {
+  padding: 0 0.5em;
 }
