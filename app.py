@@ -132,35 +132,42 @@ def new_record():
 
 @app.route("/edit_record/<record_id>", methods=["GET", "POST"])
 def edit_record(record_id):
-
-    if request.method == "POST":
-        submit = {
-            "trading_position": request.form.get("trading_position"),
-            "album_name": request.form.get("album_name"),
-            "artist_name": request.form.get("artist_name"),
-            "genre": request.form.get("genre"),
-            "release_date": request.form.get("release_date"),
-            "release_date": request.form.get("release_date"),
-            "price": request.form.get("price"),
-            "contact": request.form.get("contact"),
-            "image": request.form.get("image"),
-            "user": session["user"]
-        }
-        mongo.db.records.update_one(
-            {"_id": ObjectId(record_id)}, {"$set": submit})
-        flash("Record Updated")
-
     record = mongo.db.records.find_one({"_id": ObjectId(record_id)})
-    trading = mongo.db.trading.find().sort("trading_position", 1)
-    genres = mongo.db.genres.find().sort("genre", 1)
-    return render_template(
-        "edit_record.html", record=record, trading=trading, genres=genres)
+    if session["user"].lower() == record["user"].lower():
+        if request.method == "POST":
+            submit = {
+                "trading_position": request.form.get("trading_position"),
+                "album_name": request.form.get("album_name"),
+                "artist_name": request.form.get("artist_name"),
+                "genre": request.form.get("genre"),
+                "release_date": request.form.get("release_date"),
+                "release_date": request.form.get("release_date"),
+                "price": request.form.get("price"),
+                "contact": request.form.get("contact"),
+                "image": request.form.get("image"),
+                "user": session["user"]
+            }
+            mongo.db.records.update_one(
+                {"_id": ObjectId(record_id)}, {"$set": submit})
+            flash("Record Updated")
+
+        trading = mongo.db.trading.find().sort("trading_position", 1)
+        genres = mongo.db.genres.find().sort("genre", 1)
+        return render_template(
+            "edit_record.html", record=record, trading=trading, genres=genres)
+
+    flash("You do not have access to edit this record")
+    return redirect(url_for("get_records"))
 
 
 @app.route("/delete_record/<record_id>")
 def delete_record(record_id):
-    mongo.db.records.delete_one({"_id": ObjectId(record_id)})
-    flash("Record Deleted")
+    record = mongo.db.records.find_one({"_id": ObjectId(record_id)})
+    if session["user"].lower() == record["user"].lower():
+        mongo.db.records.delete_one({"_id": ObjectId(record_id)})
+        flash("Record Deleted")
+        return redirect(url_for("get_records"))
+    flash("You do not have access to delete this record")
     return redirect(url_for("get_records"))
 
 
