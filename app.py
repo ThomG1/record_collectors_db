@@ -87,6 +87,9 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    if "user" not in session:
+        flash("You must Log-In to view this page")
+        return redirect(url_for("login"))
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -108,6 +111,9 @@ def logout():
 
 @app.route("/new_record", methods=["GET", "POST"])
 def new_record():
+    if "user" not in session:
+        flash("You must Log-In to view this page")
+        return redirect(url_for("login"))
     if request.method == "POST":
         record = {
             "trading_position": request.form.get("trading_position"),
@@ -123,7 +129,7 @@ def new_record():
         }
         mongo.db.records.insert_one(record)
         flash("Record Successfully Added")
-        return redirect(url_for("get_records"))
+        return redirect(url_for("profile", username=session["user"]))
 
     trading = mongo.db.trading.find().sort("trading_position", 1)
     genres = mongo.db.genres.find().sort("genre", 1)
@@ -166,7 +172,7 @@ def delete_record(record_id):
     if session["user"].lower() == record["user"].lower():
         mongo.db.records.delete_one({"_id": ObjectId(record_id)})
         flash("Record Deleted")
-        return redirect(url_for("get_records"))
+        return redirect(url_for("profile", username=session["user"]))
     flash("You do not have access to delete this record")
     return redirect(url_for("get_records"))
 
