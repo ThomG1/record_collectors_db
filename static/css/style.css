@@ -31,9 +31,8 @@ html {
 }
 
 .user-records {
-  border: .4rem solid #4D2F29;
-  margin: 1rem;
-  font-size: 1.5rem;
+  border: .2rem solid #4D2F29;
+  font-size: 1 rem;
   padding: 1rem .5rem;
   text-align: center;
   background-color: white;
@@ -116,4 +115,9 @@ about-mod {
 
 .card-panel {
   border: .4rem solid #4D2F29;
+}
+
+.profile-img {
+  height: 250px;
+  width: 250px;
 }
