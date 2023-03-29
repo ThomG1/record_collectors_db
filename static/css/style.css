@@ -41,8 +41,9 @@ html {
 
 }
 
-.brand-logo {
+.record-logo {
   margin-left: 10px;
+  font-size: x-large;
 }
 
 /* Verification  */
@@ -116,11 +117,3 @@ about-mod {
 .card-panel {
   border: .4rem solid #4D2F29;
 }
-
-
-/* Media Queries */
-
-@media screen and (max-width: 768px){
-  .brand-logo {
-      font-size: small;
-} }
