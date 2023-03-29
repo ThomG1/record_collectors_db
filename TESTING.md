@@ -13,7 +13,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecord-collection-project.herokuapp.com) | ![screenshot](documentation/home-validation.png) | Pass: No Errors |
 | Login | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecord-collection-project.herokuapp.com%2Flogin) | ![screenshot](documentation/login-validation.png) | Pass: No Errors |
 | Signup | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecord-collection-project.herokuapp.com%2Fsignup) | ![screenshot](documentation/sign-up-validation.png) | Pass: No Errors |
-| Profile | [W3C](https://validator.w3.org) | ![screenshot](documentation/profile-validation.png) | One error: This can be ignored as it relates to the default image in place |
+| Profile | [W3C](https://validator.w3.org) | ![screenshot](documentation/profile-validation.png) | As this page could not be validated by URI, the code itself displayed Jinja template errors, these can be ignored |
 | New Record | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecord-collection-project.herokuapp.com%2Fnew_record) | ![screenshot](documentation/new-record-validation.png) | Pass: No Errors |
 | Edit Record | [W3C](https://validator.w3.org) | ![screenshot](documentation/new-record-validation.png) | Pass: No Errors |
 
@@ -69,41 +69,23 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
-| Mobile (DevTools) | ![screenshot](documentation/responsive-mobile.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](documentation/responsive-tablet.png) | Works as expected |
-| Desktop | ![screenshot](documentation/responsive-desktop.png) | Works as expected |
+| Mobile (iphone SE) | ![screenshot](documentation/iphone.jpeg) | Works as expected |
+| Tablet (DevTools) | ![screenshot](documentation/ipad.png) | Works as expected |
+| Desktop | ![screenshot](documentation/home.png) | Works as expected |
 
 
 ## Lighthouse Audit
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports.
-Avoid testing the local version (especially if developing in Gitpod), as this can have knock-on effects of performance.
-
-If you don't have Lighthouse in your Developer Tools,
-it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-Don't just test the home page (unless it's a single-page application).
-Make sure to test the Lighthouse Audit results for all of your pages.
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-Sample Lighthouse testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | Mobile | ![screenshot](documentation/lighthouse-home-mobile.png) | Some minor warnings |
-| Home | Desktop | ![screenshot](documentation/lighthouse-home-desktop.png) | Few warnings |
-| About | Mobile | ![screenshot](documentation/lighthouse-about-mobile.png) | Some minor warnings |
-| About | Desktop | ![screenshot](documentation/lighthouse-about-desktop.png) | Few warnings |
-| Gallery | Mobile | ![screenshot](documentation/lighthouse-gallery-mobile.png) | Slow response time due to large images |
-| Gallery | Desktop | ![screenshot](documentation/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| x | x | x | repeat for any other tested pages/sizes |
+| Home | Desktop | ![screenshot](documentation/home-lighthouse.png) | Minor warnings |
+| Profile | Desktop | ![screenshot](documentation/profile-lighthouse.png) | Minor warnings |
+| Signup | Desktop | ![screenshot](documentation/signup-lighthouse.png) | Minor warnings |
+| New Record | Desktop | ![screenshot](documentation/newrecord-lighthouse.png) | Minor warnings |
+
 
 ## Defensive Programming
 
@@ -138,29 +120,20 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Select release date  | Field will accept from calender | Pass | |
 | | Enter artwork URL | Field will accept url | Pass | |
 | | Enter contact option | Field will accept freeform text, so user can choose between email / social media / phone etc | Pass | |
-| | Click add new record button| Adds new record | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter message in textarea | Field will accept freeform text | Pass | |
-| | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
+| | Click add new record button| Adds new record / Redirects user to Home | Pass | |
 | Sign Up | | | | |
-| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | |
-| | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
-| | Confirm email | Redirects user to blank Sign In page | Pass | |
+| | Enter username | Field will accept freeform text | Pass | |
+| | Enter valid password | Field will accept freeform text | Pass | |
+| | Click on Sign Up button | Redirects user to home page | Pass | |
 | Log In | | | | |
 | | Click on the Login link | Redirection to Login page | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
 | | Enter valid password | Field will only accept password format | Pass | |
 | | Click Login button | Redirects user to home page | Pass | |
 | Log Out | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
-| Profile | | | | |
-| | Click on Profile button | User will be redirected to the Profile page | Pass | |
-| | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
-| | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
-| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
+| | Click Logout button | Redirects user to login page | Pass | |
+
+
 
 
 ## User Story Testing
