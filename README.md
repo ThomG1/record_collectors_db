@@ -139,7 +139,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
     - Allows user to delete a record. Includes a modal to confirm user intends to delete item. 
 
-![screenshot](documentation/edit-record.png)
+![screenshot](documentation/delete.png)
 
 - **Profile-page**
 
