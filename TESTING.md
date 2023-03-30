@@ -121,6 +121,15 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Enter artwork URL | Field will accept url | Pass | |
 | | Enter contact option | Field will accept freeform text, so user can choose between email / social media / phone etc | Pass | |
 | | Click add new record button| Adds new record / Redirects user to Home | Pass | |
+| Edit Record Page | | | | |
+| | Select trading position | Field will accept from dropdown menu| Pass | |
+| | Enter album name | Field will accept freeform text | Pass | |
+| | Enter artist name | Field will accept freeform text | Pass | |
+| | Select genre | Field will accept from dropdown menu | Pass | |
+| | Select release date  | Field will accept from calender | Pass | |
+| | Enter artwork URL | Field will accept url | Pass | |
+| | Enter contact option | Field will accept freeform text, so user can choose between email / social media / phone etc | Pass | |
+| | Click Edit record button| Adds new record / Redirects user to Home | Pass | |
 | Sign Up | | | | |
 | | Enter username | Field will accept freeform text | Pass | |
 | | Enter valid password | Field will accept freeform text | Pass | |
@@ -140,16 +149,17 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to explore all users entries, so that I can gain inspiration and insight into peoples collections. | ![screenshot](documentation/feature01.png) |
-| As a new site user, I would like to create a personalised account, so that I can personalise my record collection. | ![screenshot](documentation/feature02.png) |
-| As a new site user, I would like to add new records to my profile, so that I can keep my profile up to date with new purchases or sales I would like to make. | ![screenshot](documentation/feature03.png) |
-| As a new site user, I would like to record important features of each item, such as 'genre' and 'price', so that I can create a comprehensive picture of the records I'm exploring. | ![screenshot](documentation/feature03.png) |
-| As a returning site user, I would like to log in and out of my account, so that I can ensure only I have access to editing the records I have added. | ![screenshot](documentation/feature04.png) |
-| As a returning site user, I would like to update a record, so that I can keep up to do date with changes, such as the price.| ![screenshot](documentation/feature05.png) |
-| As a returning site user, I would like to delete a record, so that I can remove records I may have bought, sold, or no longer want. | ![screenshot](documentation/feature06.png) |
-| As a site administrator, I should be able to view all the entries created on the database, so that I can analyse and understand the data. | ![screenshot](documentation/feature07.png) |
+| As a new site user, I would like to explore all users entries, so that I can gain inspiration and insight into peoples collections. | ![screenshot](documentation/carousel.png) |
+| As a new site user, I would like to create a personalised account, so that I can personalise my record collection. | ![screenshot](documentation/signup.png) |
+| As a new site user, I would like to add new records to my profile, so that I can keep my profile up to date with new purchases or sales I would like to make. | ![screenshot](documentation/profile.png) |
+| As a new site user, I would like to record important features of each item, such as 'genre' and 'price', so that I can create a comprehensive picture of the records I'm exploring. | ![screenshot](documentation/new-record.png) |
+| As a returning site user, I would like to log in and out of my account, so that I can ensure only I have access to editing the records I have added. | ![screenshot](documentation/login.png) |
+| As a returning site user, I would like to update a record, so that I can keep up to do date with changes, such as the price.| ![screenshot](documentation/edit-record.png) |
+| As a returning site user, I would like to delete a record, so that I can remove records I may have bought, sold, or no longer want. | ![screenshot](documentation/delete.png) |
 | As a site administrator, I would like the site to be visually appealing on any device.  | ![screenshot](documentation/feature08.png) |
-| As a site administrator, I should be able to edit the data directly from the database. | ![screenshot](documentation/feature09.png) |
+| As a site administrator, I should be able to edit the data directly from the database. | ![screenshot](documentation/edit-data.png) |
+| As a site administrator, I should be able to view all the entries created on the database, so that I can analyse and understand the data. | ![screenshot](documentation/view-data.png) |
+
 
 
 ## Bugs
