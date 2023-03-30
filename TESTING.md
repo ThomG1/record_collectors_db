@@ -13,7 +13,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecord-collection-project.herokuapp.com) | ![screenshot](documentation/home-validation.png) | Pass: No Errors |
 | Login | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecord-collection-project.herokuapp.com%2Flogin) | ![screenshot](documentation/login-validation.png) | Pass: No Errors |
 | Signup | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecord-collection-project.herokuapp.com%2Fsignup) | ![screenshot](documentation/sign-up-validation.png) | Pass: No Errors |
-| Profile | [W3C](https://validator.w3.org) | ![screenshot](documentation/profile-validation.png) | As this page could not be validated by URI, the code itself displayed Jinja template errors, these can be ignored |
+| Profile | [W3C](https://validator.w3.org) | ![screenshot](documentation/profile-validation.png) | This page could not be validated by URI, the code itself displays no errors |
 | New Record | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecord-collection-project.herokuapp.com%2Fnew_record) | ![screenshot](documentation/new-record-validation.png) | Pass: No Errors |
 | Edit Record | [W3C](https://validator.w3.org) | ![screenshot](documentation/new-record-validation.png) | Pass: No Errors |
 
@@ -23,9 +23,12 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frecord-collection-project.herokuapp.com%2Fget_records&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/css-validation-style.png) | One Error due to materialize css |
+| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frecord-collection-project.herokuapp.com%2Fget_records&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/css-uri-validation.png) | One Error due to materialize css |
 
-Note: when the code is copies and pasted, it displays no errors. 
+Note: when the code is copied and pasted, it displays no errors. 
+
+![screenshot](documentation/css-validation.png)
+
 
 ### JavaScript
 
@@ -156,7 +159,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a returning site user, I would like to log in and out of my account, so that I can ensure only I have access to editing the records I have added. | ![screenshot](documentation/login.png) |
 | As a returning site user, I would like to update a record, so that I can keep up to do date with changes, such as the price.| ![screenshot](documentation/edit-record.png) |
 | As a returning site user, I would like to delete a record, so that I can remove records I may have bought, sold, or no longer want. | ![screenshot](documentation/delete.png) |
-| As a site administrator, I would like the site to be visually appealing on any device.  | ![screenshot](documentation/feature08.png) |
+| As a site administrator, I would like the site to be visually appealing on any device.  | ![screenshot](documentation/iphone.png) |
 | As a site administrator, I should be able to edit the data directly from the database. | ![screenshot](documentation/edit-data.png) |
 | As a site administrator, I should be able to view all the entries created on the database, so that I can analyse and understand the data. | ![screenshot](documentation/view-data.png) |
 
