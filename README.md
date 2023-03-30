@@ -12,9 +12,9 @@ https://ui.dev/amiresponsive?url=https://record-collection-project.herokuapp.com
 
 ## UX
 
-The central background image of the site is an image of a well-worn collection of records. This should provide a familiarity to the user as it emulates the process of being in a record shop, flipping through sleeves. 
+The central background image of the site is an image of a well-worn collection of records. This should provide a familiarity to the user as it emulates the process of being in a record shop. 
 
-The central background image is enclosed between light brown headers and footers, this is designed to give the feel of a shelf, also aiming at creating familiarity for the user. 
+The central background image is beneath a light brown header, this is designed to give the feel of a shelf, also aiming at creating familiarity for the user. 
 
 The Home page is laid out around a central carousel, that allows users to flick through entries. 
 
@@ -38,7 +38,7 @@ The site primarily uses three simple colours: Brown for backgrounds, white for m
 ### Typography
 
 
-- [Neucha](https://fonts.google.com/specimen/Neucha) was used for the primary headers and titles.
+- [Neucha](https://fonts.google.com/specimen/Neucha) was used for text throughout.
 
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
 
@@ -145,7 +145,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
     - The profile page, allows users to organise and view their own collections, including the artwork of each record. It allows users to edit and delete from their own collections.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/profile.png)
 
 
 ### Future Features
@@ -219,6 +219,10 @@ It contains 4 collections:
     | _id | ObjectId() | |
     | username | String | |
     | password | String | uses Secure Hash Algorithm (SHA) |
+
+I have completed the below ERD to demonstrate the relationships between collections
+
+![ERD](documentation/erd.png)
 
 ## Testing
 
