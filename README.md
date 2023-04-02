@@ -153,10 +153,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 - User Messaging
     - In place of displaying user contact details, a messaging feature would allow users to liase on purchasing or selling items from their collections. 
-- Cool new feature #2
-    - Any additional notes about this feature.
-- Cool new feature #3
-    - Any additional notes about this feature.
+
 
 ## Tools & Technologies Used
 
