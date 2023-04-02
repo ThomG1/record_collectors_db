@@ -293,54 +293,6 @@ This project can be cloned or forked in order to make a local copy on your own s
 For either method, you will need to install any applicable packages found within the *requirements.txt* file.
 - `pip3 install -r requirements.txt`.
 
-If you are using SQLAlchemy for your project, you need to create a local PostgreSQL database.
-In this example, the example database name is **db-name**.
-
-```shell
-workspace (branch) $ set_pg
-workspace (branch) $ psql
-
-... connection to postgres ...
-
-postgres=# CREATE DATABASE db-name;
-CREATE DATABASE
-postgres=# \c db-name;
-You are now connected to database "db-name" as user "foobar".
-db-name=# \q
-```
-
-Once that database is created, you must migrate the database changes from your models.py file.
-This example uses **app-name** for the name of the primary Flask application.
-
-```shell
-workspace (branch) $ python3
-
-... connection to Python CLI ...
-
->>> from app-name import db
->>> db.create_all()
->>> exit()
-```
-
-To confirm that the database table(s) have been created, you can use the following:
-
-```shell
-workspace (branch) $ psql -d db-name
-
-... connection to postgres ...
-
-postgres=# \dt
-
-	List of relations
-Schema | Name | Type | Owner
--------+------+------+--------
-public | blah1 | table | foobar
-public | blah2 | table | foobar
-public | blah3 | table | foobar
-
-db-name=# \q
-```
-
 You will need to create a new file called `env.py` at the root-level,
 and include the same environment variables listed above from the Heroku deployment steps, plus a few extras.
 
